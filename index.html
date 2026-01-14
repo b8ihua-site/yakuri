@@ -22,8 +22,8 @@ margin:0;
 min-height:100vh;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 background:
-radial-gradient(1200px 1600px at 10% 0%, #d9c3f1 0%, transparent 60%),
-radial-gradient(1000px 500px at 90% 1000%, #b1b3ff 0%, transparent 55%),
+radial-gradient(1200px 1600px at 10% 0%, #ffffff 0%, transparent 60%),
+radial-gradient(1000px 500px at 90% 1000%, #ffffff 0%, transparent 55%),
 var(--bg-dark);
 color:var(--text-main);
 display:flex;
@@ -59,7 +59,7 @@ text-align:left;
 }
 
 .title-main{
-font-size:28px;
+font-size:26px;
 font-weight:700;
 text-align:left;
 margin-bottom:15px;
@@ -79,10 +79,11 @@ margin:10px 0px;
 }
 
 .exp2{
-font-size:15px;
+font-size:13px;
 color:rgb(104, 104, 104);
 text-align:left;
 margin:0px 0px;
+line-height:19px;
 }
 
 .sub{
@@ -134,13 +135,13 @@ box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
 button.primary{
-background: linear-gradient(135deg, #8d67ac, #6f38a1);
+background: linear-gradient(135deg, #a990bd, #6f58c2);
 color:#fff;
 margin-top:20px;
 }
 
 button.primary2{
-background: linear-gradient(135deg, #8d67ac, #6f38a1);
+background: linear-gradient(135deg, #a990bd, #6f58c2);
 color:#fff;
 
 }
@@ -157,9 +158,10 @@ transform: scale(0.97);
 
 /* Mask */
 .mask{
-background: rgba(0,0,0,0.35);
+background: linear-gradient(135deg, #c2c2c2, #d8d8d8);
 color:transparent;
 border-radius:6px;
+
 padding:2px 6px;
 }
 
@@ -175,7 +177,7 @@ left:0;
 right:0;
 bottom:0;
 padding:12px 14px;
-background: rgba(20,20,30,0.65);
+background: rgba(255, 255, 255, 0.65);
 backdrop-filter: blur(18px);
 display:flex;
 gap:12px;
@@ -494,9 +496,9 @@ app.innerHTML=`
 <div class="card">
 <div class="title-sub">YW準拠</div>
 <div class="title-main">薬理学後期試験対策ノート</div>
-<div class="exp2">* 本資料は「薬理学後期まとめYW」に準拠して作成されました。</div>
 <div class="exp2">* 画面上の任意の箇所をタップすることで、マスクされた語句が段階的に表示されます。</div>
 <div class="exp2">*本アプリには全158題を収録していますが、学習効率を考慮し、一部の問題を省略しています。</div>
+<div class="exp2">* すべての漢字・カタカナ・アルファベット・数字をマスクするため、見当違いな箇所がマスクされることがあります。</div>
 </div><div class="card">
 <div class="exp">演習する単元を選択</div>
 <select id="unitSelect">
