@@ -452,7 +452,7 @@ let index=0;
 function maskText(text){
 let r='', m=false;
 for(const c of text){
-if(/[一-龯ァ-ヶA-Za-z0-9]/.test(c)){
+if(/[一-龯ァ-ヶーA-Za-z0-9]/.test(c)){
 if(!m){ r+='<span class="mask">'; m=true; }
 r+=c;
 }else{
