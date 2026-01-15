@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>薬理 暗記アプリ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+
+<style>
+:root{
+  --glass-bg: rgba(30,30,40,0.55);
+  --glass-border: rgba(255,255,255,0.12);
+  --accent: #9b6cff;
+  --text-main: #f2f2f5;
+  --text-sub: #b0b0c0;
+  --bg-dark: #0b0b10;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background:
+    radial-gradient(1200px 1600px at 10% 0%, rgba(120,80,200,0.25) 0%, transparent 60%),
+    radial-gradient(1000px 500px at 90% 100%, rgba(80,200,160,0.18) 0%, transparent 55%),
+    var(--bg-dark);
+  color:var(--text-main);
+  display:flex;
+  justify-content:center;
+  padding:16px 12px 100px;
+  line-height:26px;
+}
+
+/* App */
+#app{
+  width:100%;
+  max-width:520px;
+}
+
+/* Glass card */
+.card{
+  background: var(--glass-bg);
+  backdrop-filter: blur(22px) saturate(130%);
+  border-radius: 22px;
+  padding: 22px;
+  margin-bottom: 10px;
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* Typography */
+.title-sub{
+  font-size:17px;
+  color:var(--text-sub);
+}
+
+.title-main{
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+h2{
+  font-size:18px;
+  margin: 0 0 10px;
+}
+
+.exp{
+  font-size:17px;
+  color:var(--text-main);
+  margin:10px 0;
+}
+
+.exp2{
+  font-size:13px;
+  color:#9a9ab0;
+  line-height:19px;
+}
+
+.sub{
+  font-size:22px;
+  color: var(--text-sub);
+}
+
+.progress{
+  font-size:12px;
+  color:var(--text-sub);
+  text-align:right;
+}
+
+/* Form */
+select{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+
+  background: rgba(40,40,55,0.6);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.1),
+    0 10px 24px rgba(0,0,0,0.4);
+
+  font-size:15px;
+  color:var(--text-main);
+  margin-bottom:12px;
+
+  appearance:none;
+}
+
+/* Buttons */
+button{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  border:none;
+  font-size:16px;
+  font-weight:600;
+  background: rgba(255,255,255,0.08);
+  color:var(--text-main);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+}
+
+button.primary,
+button.primary2{
+  background: linear-gradient(135deg, #9b6cff, #5f7cff);
+  color:#fff;
+}
+
+button.primary{
+  margin-top:20px;
+}
+
+button.secondary{
+  margin-top:10px;
+  background: rgba(255,255,255,0.15);
+}
+
+button:active{
+  transform: scale(0.97);
+}
+
+/* Mask */
+.mask{
+  background: linear-gradient(135deg, #3a3a4a, #4a4a5a);
+  color:transparent;
+  border-radius:6px;
+  padding:2px 6px;
+}
+
+.mask.revealed{
+  background: rgba(255,255,255,0.08);
+  color:var(--text-main);
+}
+
+/* Bottom nav */
+.bottom-nav{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:12px 14px;
+  background: rgba(20,20,30,0.7);
+  backdrop-filter: blur(18px);
+  display:flex;
+  gap:12px;
+  justify-content:center;
+}
+
+.bottom-nav button{
+  max-width:180px;
+}
+</style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <div id="nav"></div>
+</body>
+</html>
