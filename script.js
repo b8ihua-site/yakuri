@@ -1,4 +1,4 @@
-<script>
+
 /* ===== データ ===== */
 const data = [
 {
@@ -364,4 +364,3 @@ function next(){ index++; showQuestion(); }
 
 /* 起動 */
 showStart();
-</script>
